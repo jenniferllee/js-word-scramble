@@ -46,14 +46,23 @@
             // }
 
             // break
-            
-            if (answer != randomWord) {
-                alert("Sorry you are wrong, the correct word is " + randomWord);
+            ans = true
+            while (ans) {
+                if (answer != randomWord) {
+                    answer = prompt("That is not the correct word. Please try again: " + scrambleWord);
+                }
+                else {
+                    alert("Congratulations! You guessed the word.");
+                    ans = false
+                }
             }
+            // if (answer != randomWord) {
+            //     alert("Sorry you are wrong, the correct word is " + randomWord);
+            //}
             // If the user guesses the correct word, congratulate them.
-            else {
-                alert("Congratulations! You guessed the word.");
-            };
+            // else {
+            //     alert("Congratulations! You guessed the word.");
+            // };
             playing = confirm("Press OK To keep playing or Cancel to quit");
 
             // What does confirm() return?
